@@ -1,0 +1,54 @@
+{
+  "name": "@ampretia/webhook-mqtt",
+  "version": "0.0.1",
+  "description": "",
+  "files": [
+    "lib/**/*"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib",
+    "format": "prettier --write \"{src,test}/**/*.ts\"",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "build": "npm run format && npm run clean && npm run lint && echo Using TypeScript && tsc --version && tsc --pretty && npm link",
+    "release": "standard-version",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "@types/node": "^15.14.0",
+    "@types/ws": "^8.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^28.1.2",
+    "prettier": "^2.8.2",
+    "standard-version": "^9.5.0",
+    "ts-jest": "^28.0.5",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@types/pino": "^7.0.5",
+    "@types/source-map-support": "^0.5.4",
+    "adaro": "~1.0.4",
+    "async-mqtt": "^2.6.1",
+    "cookie-parser": "~1.4.5",
+    "debug": "~4.3.1",
+    "env-var": "^7.0.0",
+    "express": "~4.17.1",
+    "http-errors": "~1.8.0",
+    "json-beautify": "^1.1.1",
+    "pino": "^8.1.0",
+    "pino-pretty": "^8.1.0",
+    "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.21",
+    "yargs": "^17.5.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
